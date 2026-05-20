@@ -1,0 +1,31 @@
+<div class="container-detalhes">
+  
+  <div class="bloco-imagem">
+    <img [src]="produto.imagem" [alt]="produto.nome">
+  </div>
+
+  <div class="bloco-info">
+    <h2 class="produto-titulo" translate="no">{{ produto.nome }}</h2>
+    <p class="produto-preco">R$ {{ produto.preco.toFixed(2) }}</p>
+    
+    <div class="divisor"></div>
+    
+    <p class="produto-descricao">{{ produto.descricao }}</p>
+    
+    <div class="divisor"></div>
+
+    <div class="seletor-quantidade">
+      <label>Quantidade:</label>
+      <div class="controles">
+        <button (click)="diminuir()">-</button>
+        <span>{{ quantidade }}</span>
+        <button (click)="aumentar()">+</button>
+      </div>
+    </div>
+
+    <button class="btn-carrinho" (click)="adicionarAoCarrinho()">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+
+</div>
