@@ -8,6 +8,6 @@ export const routes: Routes = [
     { path: '', redirectTo: 'vitrine', pathMatch: 'full' },
     { path: 'vitrine', component: Vitrine },
     { path: 'carrinho', component: Carrinho },
-    { path: 'produtos-detalhes', component: ProdutosDetalhes },
+    { path: 'produtos-detalhes/:id', component: ProdutosDetalhes }, // <-- O ":id" precisa estar aqui!
     { path: '**', component: NaoEncontrado }
 ];

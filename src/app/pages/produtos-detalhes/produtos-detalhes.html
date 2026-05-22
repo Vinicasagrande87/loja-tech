@@ -1,16 +1,16 @@
 <div class="container-detalhes">
   
   <div class="bloco-imagem">
-    <img [src]="produto.imagem" [alt]="produto.nome">
+    <img [src]="produto?.imagem" [alt]="produto?.nome">
   </div>
 
   <div class="bloco-info">
-    <h2 class="produto-titulo" translate="no">{{ produto.nome }}</h2>
-    <p class="produto-preco">R$ {{ produto.preco.toFixed(2) }}</p>
+    <h2 class="produto-titulo" translate="no">{{ produto?.nome }}</h2>
+    <p class="produto-preco">R$ {{ produto?.preco?.toFixed(2) }}</p>
     
     <div class="divisor"></div>
     
-    <p class="produto-descricao">{{ produto.descricao }}</p>
+    <p class="produto-descricao">{{ produto?.desc }}</p>
     
     <div class="divisor"></div>
 

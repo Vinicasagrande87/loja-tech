@@ -1,25 +1,22 @@
 <h2>Vitrine</h2>
-
 <div class="vitrine-grid">
-  
-  <a routerLink="/produtos-detalhes" class="produto-card">
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=250&h=250&fit=crop" alt="Smartphone" class="celular">
-    <p class="produto-nome" translate="no">Smartphone</p>
+  <a [routerLink]="['/produtos-detalhes', 1]" class="produto-card">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=250&h=250&fit=crop" alt="Smartphone">
+    <p class="produto-nome">Smartphone</p>
   </a>
 
-  <a routerLink="/produtos-detalhes" class="produto-card">
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=250&h=250&fit=crop" alt="Fone de Ouvido" class="fone">
+  <a [routerLink]="['/produtos-detalhes', 2]" class="produto-card">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=250&h=250&fit=crop" alt="Fone">
     <p class="produto-nome">Fone de Ouvido</p>
   </a>
 
-  <a routerLink="/produtos-detalhes" class="produto-card">
-    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=250&h=250&fit=crop" alt="Mouse Sem Fio" class="mouse">
+  <a [routerLink]="['/produtos-detalhes', 3]" class="produto-card">
+    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=250&h=250&fit=crop" alt="Mouse">
     <p class="produto-nome">Mouse Sem Fio</p>
   </a>
 
-  <a routerLink="/produtos-detalhes" class="produto-card">
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=250&h=250&fit=crop" alt="Notebook" class="note">
-    <p class="produto-nome" translate="no">Notebook</p>
+  <a [routerLink]="['/produtos-detalhes', 4]" class="produto-card">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=250&h=250&fit=crop" alt="Notebook">
+    <p class="produto-nome">Notebook</p>
   </a>
-
 </div>

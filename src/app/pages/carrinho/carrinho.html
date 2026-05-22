@@ -1,1 +1,47 @@
-<p>carrinho works!</p>
+<div class="container-carrinho">
+  <div class="cabecalho-carrinho">
+    <h2>Seu Carrinho</h2>
+  </div>
+
+  @if (itens.length === 0) {
+    <div class="carrinho-vazio">
+      <p>O seu carrinho está vazio no momento.</p>
+      <button routerLink="/vitrine" class="btn-voltar">Voltar para a Vitrine</button>
+    </div>
+  } @else {
+    <div class="lista-itens">
+      @for (item of itens; track item.id; let i = $index) {
+        <div class="item-linha">
+          <img [src]="item.imagem" [alt]="item.nome" class="img-carrinho">
+          
+          <div class="item-detalhes">
+            <h3 translate="no">{{ item.nome }}</h3>
+            <p class="item-preco-unitario">Preço unitário: R$ {{ item.preco.toFixed(2) }}</p>
+          </div>
+
+          <div class="item-quantidade">
+            <span>Qtd: <strong>{{ item.quantidade }}</strong></span>
+          </div>
+
+          <div class="item-subtotal">
+            <p>R$ {{ (item.preco * item.quantidade).toFixed(2) }}</p>
+          </div>
+          
+          <button class="btn-remover" (click)="excluirItem(i)">Excluir</button>
+        </div>
+      }
+    </div>
+
+    <div class="resumo-carrinho">
+      <div class="total-linha">
+        <span>Total do Pedido:</span>
+        <span class="preco-total">R$ {{ total.toFixed(2) }}</span>
+      </div>
+      
+      <div class="botoes-acoes">
+        <button routerLink="/vitrine" class="btn-continuar-fim">Adicionar Mais Produtos</button>
+        <button class="btn-finalizar" (click)="finalizarCompra()">Finalizar Compra</button>
+      </div>
+    </div>
+  }
+</div>

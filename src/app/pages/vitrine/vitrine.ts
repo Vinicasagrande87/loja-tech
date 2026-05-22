@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-vitrine',
   standalone: true,
-  imports: [RouterModule], // <-- IMPORTANTE: adicionado aqui para habilitar o routerLink
+  imports: [RouterModule], 
   templateUrl: './vitrine.html',
   styleUrl: './vitrine.css',
 })
